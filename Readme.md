@@ -8,7 +8,7 @@ screenshot and full documentation.
 
 | # | Lab | Topics Covered |
 |---|-----|----------------|
-| 01 | [Cisco Routers and Switches Config](./lab-01-basic switching/)
+| 01 | [Cisco Routers and Switches Config](./lab-01-basic switching/) | IP Addressing, Router and Switches Configuration | 
 
 ## Tools
 - Cisco Packet Tracer 8.2.2

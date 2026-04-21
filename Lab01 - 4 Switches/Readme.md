@@ -1,12 +1,12 @@
 # Basic Switching and Routing
 
 ## Objective
-This lab focuses on switches and router configuration for successful pin among connected devices.
+This lab focuses on switches and router configuration for successful ping among connected devices.
 
 ## Topology
 ![Network Topology](screenshots/topology.png)
 
-## Technologies Used
+## Tools Used
 - Cisco Packet Tracer
 
 
