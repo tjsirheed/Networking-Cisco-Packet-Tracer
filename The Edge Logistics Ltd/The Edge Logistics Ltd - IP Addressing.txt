@@ -1,0 +1,129 @@
+---------------------------------------------------
+The Edge Logistics Ltd
+---------------------------------------------------
+1. VLAN Segmentation
+2. STP Optimization
+3. EtherChannel
+4. HSRP
+5. EIGRP
+6. ACL
+8. SSH Config
+---------------------------------------------------
+Network Architecture Breakdown
+---------------------------------------------------
+Network Devices:
+1. CoreSwitch1
+2. CoreSwitch2
+3. AccessSwitch 1,2,3 and 4
+4. Edge Router
+5. Branch Switch
+---------------------------------------------------
+VLAN Department Segmentation
+---------------------------------------------------
+VLAN 10 - HR Department
+
+Devices:
+1. HR_PC
+IP: 10.10.10.10/24
+
+2. HR_Laptop
+IP: 10.10.10.11/24
+
+Default Gateway:
+10.10.10.254
+---------------------------------------------------
+VLAN 20 - Finance Department
+
+Devices:
+1. Finance_PC1
+IP: 10.10.20.10/24
+
+2. Finance_PC2
+IP: 10.10.20.11/24
+
+3. Finance_Laptop1
+IP: 10.10.20.12/24
+
+Default Gateway:
+10.10.20.254/24
+---------------------------------------------------
+VLAN 30 - Operations & Logistics Department
+
+Devices:
+1. O&L_PC1
+IP: 10.10.30.10/24
+
+2. O&L_Laptop1
+IP: 10.10.30.11/24
+
+3. O&L_Printer1
+IP: 10.10.30.20/24
+
+Default Gateway:
+10.10.30.254/24
+---------------------------------------------------
+VLAN 40 - Facility Manager
+
+Devices:
+1. FM_PC1
+IP: 10.10.40.10/24
+
+2. FM_Laptop1
+IP: 10.10.40.11/24
+
+Default Gateway:
+10.10.40.254/24
+---------------------------------------------------
+VLAN 50 - IT Department
+
+Devices:
+1. IT_PC1
+IP: 10.10.50.10/24
+
+2. IT_Laptop1
+IP: 10.10.50.11/24
+
+3. IT_Laptop2
+IP: 10.10.50.12/24
+
+4. IT_Server1
+IP: 10.10.50.20/24
+
+Default Gateway:
+10.10.50.254/24
+---------------------------------------------------
+
+VLAN Addressing
+
+| VLAN | Department             | Network Address | 
+| ---- | ---------------------- | --------------- | 
+| 10   | HR Department          | 10.10.10.0/24   |  
+| 20   | Finance Department     | 10.10.20.0/24   |             
+| 30   | Operations & Logistics | 10.10.30.0/24   |              
+| 40   | Facilities Management  | 10.10.40.0/24   |             
+| 50   | IT Department          | 10.10.50.0/24   |             
+| 100  | Branch Office          | 10.10.100.0/24  |            
+
+---------------------------------------------------
+HSRP Gateway Allocation
+
+| VLAN    | CoreSwitch1 SVI | CoreSwitch2 SVI
+| ------- | --------------- | --------------- 
+| VLAN 10 | 10.10.10.251    | 10.10.10.252    
+| VLAN 20 | 10.10.20.251    | 10.10.20.252     
+| VLAN 30 | 10.10.30.251    | 10.10.30.252      
+| VLAN 50 | 10.10.50.251    | 10.10.50.252  
+| VLAN 40 | 10.10.40.251    | 10.10.40.252  
+| VLAN 1  | 10.10.1.251     | 10.10.1.252       
+
+---------------------------------------------------
+Management IP Addresses - VLAN 1
+
+| AccessSwitch1      | 10.10.1.1  |
+| AccessSwitch2      | 10.10.1.2  |
+| AccessSwitch3      | 10.10.1.3  |
+| AccessSwitch4      | 10.10.1.4  |
+
+Default gateway: 10.10.1.254/24
+
+

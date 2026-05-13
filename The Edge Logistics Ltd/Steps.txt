@@ -1,0 +1,94 @@
+Steps
+
+--------------------------------------------------------------------------------------
+Phase 1 - Basic Configs
+1. Configure Hostnames on all devices in the network
+2. Shutdown unused interfaces
+3. Configure password to the privilege exec mode and console ports on network devices
+4. Configure SSH and telnet (for practice) on network devices
+
+Username (CampusNetwork) and Password (@N3tworkTopologyL4b)
+
+--------------------------------------------------------------------------------------
+Phase 2 - VLAN Configs
+Set vtp mode to transparent and domain
+
+6. Add VLANS 10, 20, 30, 40 and 50 to the VLAN database
+
+VLAN  Name        
+ 10    HR         
+ 20    FINANCE    
+ 30    OPERATIONS 
+ 40    FACILITY MANAGER 
+ 50    IT         
+
+7. Configure access ports - enable port fast and BPDU Guard
+
+8. Configure trunk ports
+
+--------------------------------------------------------------------------------------
+Phase 3 
+9. Use CDP and LLDP to verify links
+10. Configure and Optimize STP
+11. Optimize spanning tree with Coreswitch1 being the root for vlan 10, 30 and 50 while CoreSwitch2 serves as the root for VLAN 1, 20, 40
+
+12. Verify STP
+
+Phase 4 - Etherchannels
+13. Configure Etherchannels on the core switches
+14. Verify Etherchannels
+
+Phase 5 - Inter-VLAN Routing and HSRP
+15. Configure SVIs on core switches - IP route
+16. Configure HSRP
+17. Optimize HSRP Load balancing
+
+| VLAN | Active Router |
+| ---- | ------------- |
+| 1    | CoreSwitch2   |
+| 10   | CoreSwitch1   |
+| 20   | CoreSwitch2   |
+| 30   | CoreSwitch1   |
+| 40   | CoreSwitch2   |
+| 50   | CoreSwitch1   |
+
+18. Verify HSRP
+
+--------------------------------------------------------------------------------------
+Phase 6
+19. Configure routed links
+20. Configure EIGRP
+21. Verify EIGRP
+
+--------------------------------------------------------------------------------------
+Phase 7 - ACL
+22. Configure ACL
+
+NB: Only IT department should be able to ssh into end devices.
+
+--------------------------------------------------------------------------------------
+Phase 8 - NAT
+23. Configure NAT on Edge Router
+24. Enable PAT
+
+--------------------------------------------------------------------------------------
+Phase 9
+
+25. Configure NTP
+26. Configure Syslog
+
+--------------------------------------------------------------------------------------
+Phase 10 - Verification and Testing (More like Unit testing. Did most of it dutring configuration tho)
+27. Verify VLANs
+28. Verify Trunks
+29. Verify EtherChannel
+30. Verify HSRP
+31. Verify EIGRP
+32. Verify NAT
+
+Test Connectivity
+33. PC-to-PC
+34. VLAN-to-VLAN
+35. External to internal network
+36. PC-to-Server
+37. SSH test from IT to network devices
